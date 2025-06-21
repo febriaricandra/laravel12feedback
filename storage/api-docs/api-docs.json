@@ -60,8 +60,7 @@
                                 "required": [
                                     "name",
                                     "email",
-                                    "password",
-                                    "password_confirmation"
+                                    "password"
                                 ],
                                 "properties": {
                                     "name": {
@@ -72,10 +71,6 @@
                                         "format": "email"
                                     },
                                     "password": {
-                                        "type": "string",
-                                        "format": "password"
-                                    },
-                                    "password_confirmation": {
                                         "type": "string",
                                         "format": "password"
                                     }
