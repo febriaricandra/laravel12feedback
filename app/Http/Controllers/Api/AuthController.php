@@ -9,7 +9,6 @@ use App\Models\User;
 
 /**
  * @OA\Info(title="API Documentation", version="1.0")
- * @OA\Server(url="http://localhost:8000/api")
  */
 class AuthController extends Controller
 {
