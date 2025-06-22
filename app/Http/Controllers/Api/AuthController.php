@@ -9,6 +9,13 @@ use App\Models\User;
 
 /**
  * @OA\Info(title="API Documentation", version="1.0")
+ * 
+ * @OA\SecurityScheme(
+ *     securityScheme="bearerAuth",
+ *     type="http",
+ *     scheme="bearer",
+ *     bearerFormat="JWT"
+ * )
  */
 class AuthController extends Controller
 {
@@ -93,6 +100,7 @@ class AuthController extends Controller
      * @OA\Get(
      *     path="/api/profile",
      *     summary="Get User Profile",
+     *     security={{"bearerAuth":{}}},
      *     @OA\Response(response=200, description="User profile retrieved successfully"),
      *     @OA\Response(response=401, description="Unauthorized")
      * )

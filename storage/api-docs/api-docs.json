@@ -5,10 +5,10 @@
         "version": "1.0"
     },
     "paths": {
-        "/login": {
+        "/api/login": {
             "post": {
                 "summary": "User Login",
-                "operationId": "67d6d0fdd54fba132e1b6f55ca254183",
+                "operationId": "222b2625838e3c57e017987f73598fda",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -43,10 +43,10 @@
                 }
             }
         },
-        "/register": {
+        "/api/register": {
             "post": {
                 "summary": "User Registration",
-                "operationId": "5d4fa5d5607ed675ba93907e1fc94534",
+                "operationId": "8e4e3cb7b46126f4696379d3c7eeb4ad",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -85,10 +85,10 @@
                 }
             }
         },
-        "/logout": {
+        "/api/logout": {
             "post": {
                 "summary": "User Logout",
-                "operationId": "28d48c13fca984400ac8de99f54ee13a",
+                "operationId": "ad65cbbd4e9f201619eae184a5961a98",
                 "responses": {
                     "200": {
                         "description": "Successfully logged out"
@@ -99,10 +99,10 @@
                 }
             }
         },
-        "/profile": {
+        "/api/profile": {
             "get": {
                 "summary": "Get User Profile",
-                "operationId": "2c21d15f399373a0c224a8064ee8ae40",
+                "operationId": "94a5f4c5f5e5755cf43698cf9bc49e9d",
                 "responses": {
                     "200": {
                         "description": "User profile retrieved successfully"
@@ -110,7 +110,21 @@
                     "401": {
                         "description": "Unauthorized"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
             }
         }
     }
