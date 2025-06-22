@@ -15,7 +15,7 @@ class AuthController extends Controller
     
     /**
      * @OA\Post(
-     *     path="/login",
+     *     path="/api/login",
      *     summary="User Login",
      *     @OA\RequestBody(
      *         required=true,
@@ -44,7 +44,7 @@ class AuthController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/register",
+     *     path="/api/register",
      *     summary="User Registration",
      *     @OA\RequestBody(
      *         required=true,
@@ -76,7 +76,7 @@ class AuthController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/logout",
+     *     path="/api/logout",
      *     summary="User Logout",
      *     @OA\Response(response=200, description="Successfully logged out"),
      *     @OA\Response(response=401, description="Unauthorized")
@@ -91,7 +91,7 @@ class AuthController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/profile",
+     *     path="/api/profile",
      *     summary="Get User Profile",
      *     @OA\Response(response=200, description="User profile retrieved successfully"),
      *     @OA\Response(response=401, description="Unauthorized")
